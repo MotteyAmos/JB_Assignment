@@ -8,10 +8,19 @@ const Home = () => {
 
     return (
         <View style={{ flex: 1,paddingHorizontal:16 }}>
-             
-            <View style={{marginVertical:24}}>
-                <Text style={{fontSize:18}}>Current Balance GHC <Text style={{fontWeight:"700"}}>{user.balance}</Text></Text>
+              <View style={{ marginVertical: 24 }}>
+                <Text style=
+                    {{
+                        fontSize: 24,
+                        fontWeight: "bold"
+
+                    }}>Welcome back {user.userName}</Text>
             </View>
+
+            <View style={{marginVertical:24}}>
+                <Text style={{fontSize:18}}>Current Balance GHC <Text style={{fontWeight:"600"}}>{user.balance}</Text></Text>
+            </View>
+
             <View style={{gap:16}}>
              
                     <ActionCard img={require("@/assets/images/deposite_img1.png")} title="Deposite" bgColor='#6DF873'  href="Deposite"/>

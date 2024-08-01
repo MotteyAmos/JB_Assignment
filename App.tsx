@@ -12,8 +12,7 @@ import MakePayment from './screens/MakePayment';
 import WithDrawal from './screens/WithDrawal';
 import { store } from '@/globalStore/app/store'
 import { Provider } from 'react-redux'
-import { useAppSelector, useAppDispatch } from '@/globalStore/app/hook'
-import user from './globalStore/features/user/user';
+
 
 function HomeScreen() {
 
@@ -25,7 +24,7 @@ function HomeScreen() {
 }
 
 const Stack = createNativeStackNavigator();
-const user = useAppSelector((state) => state.user)
+
 
 function App() {
   return (
@@ -35,7 +34,7 @@ function App() {
         <Stack.Navigator>
           <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
           <Stack.Screen name="Registration" component={Registratin} options={{ headerShown: false }} />
-          <Stack.Screen name="Home" component={Home} options={{ headerShown:true , title:`Welcome back ${user.userName}`}} />
+          <Stack.Screen name="Home" component={Home} options={{ headerShown:false}} />
           <Stack.Screen name="Deposite" component={Deposite} options={{ headerShown: true , title:"Deposite"}} />
           <Stack.Screen name="MakePayment" component={MakePayment} options={{ headerShown: true , title:"Make Payment"}} />
           <Stack.Screen name="WithDrawal" component={WithDrawal} options={{ headerShown: true , title:"Withdrawal"}} />
